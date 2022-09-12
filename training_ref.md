@@ -97,4 +97,6 @@ p
 # Webpack and Babel
 
 > npm install webpack webpack-cli -D
-> npm install @babel/core @babel/cli @babel/preset-env -D
+> npm install @babel/core @babel/cli @babel/preset-env babel-loader -D
+
+> npm run build

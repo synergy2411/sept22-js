@@ -1,1 +1,1 @@
-console.log("Loaded...");
+console.log("Configure sucessfully with babel");
