@@ -1,0 +1,1 @@
+console.log("Configure sucessfully with babel");
