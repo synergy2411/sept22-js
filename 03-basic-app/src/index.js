@@ -40,21 +40,21 @@
 
 // - Constructor Method : Similar types of object
 
-function Person(firstName, lastName) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.greet = function () {
-        return `Hello from ${this.firstName} ${this.lastName}`;
-    }
-}
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.greet = function () {
+//         return `Hello from ${this.firstName} ${this.lastName}`;
+//     }
+// }
 
-let john = new Person("John", "Doe");
+// let john = new Person("John", "Doe");
 
-let jenny = new Person("Jenny", "Doe");
+// let jenny = new Person("Jenny", "Doe");
 
 
-console.log(john.greet());
-console.log(jenny.greet());
+// console.log(john.greet());
+// console.log(jenny.greet());
 
 
 
@@ -72,3 +72,69 @@ console.log(jenny.greet());
 
 
 // - Instance Method : implements inheritance
+
+// let shoe = {
+//     size: 8
+// }
+
+// let magicShoe = Object.create(shoe);
+
+// console.log("Magic Shoe : ", magicShoe);
+
+// console.log("Size : Magic Shoe", magicShoe.size);
+
+// console.log(shoe.isPrototypeOf(magicShoe))
+// console.log(magicShoe.isPrototypeOf(shoe))
+// console.log(Object.prototype.isPrototypeOf(shoe))
+
+
+// let str = "Hello World";
+// let str = new String("Hello World");
+
+// console.log(str.length);
+// console.log(str.indexOf("o"))
+
+// console.log(str.doesNotExist)
+
+
+
+
+// PROTOTYPE INHERITANCE / EXTENDING THE FUNCTIONALITY
+
+function Person(firstName, lastname) {
+    this.firstName = firstName;
+    this.lastname = lastname;
+    this.sayHi = function () {
+        console.log("Hi");
+    }
+}
+
+Person.prototype.greet = function () {
+    return `Hello from ${this.firstName} ${this.lastname}`
+}
+
+
+let john = new Person("John", "Doe")
+let jenny = new Person("Jenny", "Doe")
+
+console.log(john)               // Person { firstName, lastName, sayHi()}
+console.log(jenny.toString())
+
+
+
+let str = "Welcome to the world of JavaScript";
+let strTwo = "Javascript is awesome";
+
+String.prototype.numberOfOccurance = function (letter) {
+    let count = 0;
+    for (let i = 0; i < this.length; i++) {
+        if (this.charAt(i).toLowerCase() === letter.toLowerCase()) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(str.numberOfOccurance("t"))         // 3
+
+console.log(strTwo.numberOfOccurance("a"));
