@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"Configure sucessfully with babel\");\n\n//# sourceURL=webpack://02-boilerplate-webpack-babel-setup/./src/index.js?");
+eval("// OBJECTS : unorganized collection in key-value format\n// - Literal Method : directly supplied the object value to variable\nvar myBooks = [\"book1\", \"book2\", \"book3\"];\nvar box = {\n  type: \"Container\",\n  \"width\": 8,\n  \"heigth\": 6,\n  \"no of books\": 12,\n  addbook: function addbook(book) {\n    box.books.push(book);\n  },\n  books: myBooks,\n  createdAt: new Date(\"Sept 12, 2022\")\n};\nconsole.log(JSON.parse(JSON.stringify(box)));\nbox.addbook(\"Book4\");\nconsole.log(box);\nconsole.log(\"My Books length : \", myBooks.length); // ?\n// box.volume = box.width * box.heigth;\n// console.log(box);           // { width, height, volume }\n// console.log(\"Box Width : \", box[\"width\"])\n// console.log(\"Number of Books \", box[\"no of books\"])\n// - Constructor Method : Similar types of object\n// - Instance Method : implements inheritance\n\n//# sourceURL=webpack://02-boilerplate-webpack-babel-setup/./src/index.js?");
 
 /***/ })
 
