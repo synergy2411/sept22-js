@@ -100,3 +100,9 @@ p
 > npm install @babel/core @babel/cli @babel/preset-env babel-loader -D
 
 > npm run build
+
+# Objects
+
+- Literal => let user = { name : "john doe", age : 32}
+- Constructor => let john = new Person("John","Doe")
+- Instance => let magicShoe = Object.create(shoe)
