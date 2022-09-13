@@ -155,17 +155,58 @@
 //     console.log(data)
 // }
 
-function hof(arr, callback) {
-    if (arr.length > 2) {
-        callback(new Error("Too many values"));
-    } else {
-        callback(null, "Too less values")
+// function hof(arr, callback) {
+//     if (arr.length > 2) {
+//         callback(new Error("Too many values"));
+//     } else {
+//         callback(null, "Too less values")
+//     }
+// }
+
+// hof([12, 3], (err, data) => {
+//     if (err) {
+//         return console.error(err)
+//     }
+//     console.log(data)
+// })
+
+
+
+
+
+// CLOSURES
+
+// function testClosure() {
+//     let x = 4;
+//     return function () {
+//         return ++x;
+//     }
+// }
+
+// let nestedFn = testClosure()
+
+// console.log(nestedFn());        // 5
+// console.log(nestedFn());        // 6
+// console.log(nestedFn());        // 6
+// console.log(nestedFn());        // 6
+// console.log(nestedFn());        // 6
+
+
+function buildTicket(transport) {
+    let numberOfPassengers = 0;
+
+    return function (name) {
+        return `Hello ${name}, You are going via ${transport}.
+        Your ticket ID is #${++numberOfPassengers}`
     }
 }
 
-hof([12, 3], (err, data) => {
-    if (err) {
-        return console.error(err)
-    }
-    console.log(data)
-})
+const shipTransport = buildTicket("Ship")
+
+console.log(shipTransport("John"))      // ?
+console.log(shipTransport("Jenny"))      // ?
+console.log(shipTransport("Alice"))      // ?
+
+let kangarooTansport = buildTicket("Kangaroo")
+
+console.log(kangarooTansport("Maria"))  // ?

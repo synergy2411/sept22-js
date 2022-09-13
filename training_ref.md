@@ -136,7 +136,10 @@ p
 - Higher Order Function - receives other functions as parameters
 
 - Callbacks - sent as a parameter to other functions (HOF)
+
   - error first, callback last
+
+- Closure - process of binding the outer scope variables with inner functions
 
 # When we go for nested function, we loose the reference of 'this' keyword
 
