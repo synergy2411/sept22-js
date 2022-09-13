@@ -106,3 +106,9 @@ p
 - Literal => let user = { name : "john doe", age : 32}
 - Constructor => let john = new Person("John","Doe")
 - Instance => let magicShoe = Object.create(shoe)
+
+# Array
+
+- Array can hold any data type
+- One value in Array() constructor, treated as size of the array
+- More than one value in Array() constructor, treated as elements in the array.
