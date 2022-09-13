@@ -106,7 +106,7 @@
 
 
 
-
+// PRACTICE EXERCISE
 
 let user = {
     firstName: "Alice",
@@ -118,4 +118,12 @@ let user = {
     },
     friends: ["Jack", "Jill"]
 }
+
+
+let users = [
+    { email: "john@test", age: 20 },
+    { email: "jill@test", age: 22 },
+    { email: "jack@test", age: 23 },
+    { email: "jenny@test", age: 26 },
+]
 
