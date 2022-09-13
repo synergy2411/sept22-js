@@ -141,6 +141,18 @@ p
 
 - Closure - process of binding the outer scope variables with inner functions
 
+# Scope Chaining
+
+-> local scope -> outer scope -> global scope
+
+# Lexical Scoping is depends upon the actual placement of the function.
+
 # When we go for nested function, we loose the reference of 'this' keyword
+
+# Call, Apply, Bind
+
+- bind : return the bounded function with supplied context
+- call : immediately call the function with supplied context and accepts arguments as individual elements
+- apply : immediately call the function with supplied context and accepts arguments as an Array
 
 # Iterators and generators
