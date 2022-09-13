@@ -94,3 +94,37 @@ console.log(numbers);
 // console.log(mappedNumbers);
 // console.log(filteredArray);
 // console.log(slicedArray)
+
+
+
+
+// PRACTICE EXERCISE
+
+let users = [
+    { name: "John Doe", age: 30 },
+    { name: "Jenny Doe", age: 33 },
+    { name: "Alice", age: 35 },
+    { name: "Maria", age: 38 },
+]
+
+// - find out all users having age >= 35
+// - find out the user whose name starts with 'M'
+// - find out the total age of all the users
+// - sort the users according to their names
+// - delete the user named 'Alice'
+
+
+
+
+// TYPED ARRAY - WebGL - 3D, Images, Audio/Video, Large Files / Blobs
+
+let buffer = new ArrayBuffer(16);
+
+let dv1 = new DataView(buffer);
+
+dv1.setInt8(11, 99);
+
+// 4 Bytes starting from 10th index
+let dv2 = new DataView(buffer, 10, 4);
+
+console.log(dv2.getInt8(1))
