@@ -155,4 +155,6 @@ p
 - call : immediately call the function with supplied context and accepts arguments as individual elements
 - apply : immediately call the function with supplied context and accepts arguments as an Array
 
+# Spread creates shallow copy of collection - Array / Object
+
 # Iterators and generators
