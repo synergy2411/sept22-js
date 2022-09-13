@@ -51,7 +51,7 @@ Break : 03:30 - 03:45 (15 Minutes)
 - while
 - do...while
 - for
-  > for...of - can be used on iterable (Array)
+  > for...of - can be used on iterable - (Symbol.iterator) (Array, Arguments)
   > for...in - can be used with Objects
   > for(initializer, condition, increment/decrement)
 
@@ -112,3 +112,32 @@ p
 - Array can hold any data type
 - One value in Array() constructor, treated as size of the array
 - More than one value in Array() constructor, treated as elements in the array.
+
+# JavaScript Engine run in two phases -
+
+1. Creation Phase : JS Engine allocates the memory to the variables and functions
+
+2. Execution Phase : executes the programs i.e assignments, return statements etc
+
+## Functions -
+
+- Function Syntax -
+  : creates hot-spot in memory and hence return the values without compiling
+  : Can be called before they are declared
+
+- Function Expression -
+  : always re-compiled before returning the result
+
+- Arrow Function - args_list => fn_body
+  : Two flavours > with curly braces - {} > without curly braces - only one line
+
+  : Limitations - > Can't call them with 'new' operator > Can't access 'arguments' keyword > Don't have their own 'this' keyword
+
+- Higher Order Function - receives other functions as parameters
+
+- Callbacks - sent as a parameter to other functions (HOF)
+  - error first, callback last
+
+# When we go for nested function, we loose the reference of 'this' keyword
+
+# Iterators and generators

@@ -1,130 +1,171 @@
-// let numbers = [2, 3, 4, 5, 6];
+// Function Syntax
 
-// let arr = ["John Doe", 32, true, { email: "test@test.com" }, function () { console.log("Function Called") }]
+// console.log("Sum is ", add(2, 5));
 
-// console.log(arr[3].email)
-
-// arr[4]()
-
-// let numbers = new Array(2, 3, 4, 5, 6);
-
-// console.log(numbers.length);
-
-// let newNumbers = new Array(9);
-
-// console.log(newNumbers.length);
+// function add(n1, n2) {
+//     return n1 + n2;
+// }
 
 
-// ARRAY FUNCTIONS
+// Function Expression
 
-let numbers = [12, 14, 42, 57, 100]
-
-// numbers.push(99);
-
-// numbers.pop()
-
-// numbers.shift()
-
-// numbers.unshift(101);
+// let addition = function (n1, n2) {          // Anonymous
+//     return n1 + n2;
+// }
+// console.log(addition(4, 5));      // undefined
 
 
-// numbers.splice(1, 2)         // [] 
-
-// numbers.reverse()
-
-// numbers.sort()
-
-// numbers.fill(0, 3, 5)
 
 
-// let mappedNumbers = numbers.map(function (value, index, array) {
-//     return value * 2;
-// })
-
-// let filteredArray = numbers.filter(function (value, index, array) {
-//     return value > 50;
-// })
-
-// let slicedArray = numbers.slice(2, 4)
-
-// let moreNumbers = [13, 76, 89]
-
-// let concatedArray = numbers.concat(moreNumbers)
-
-// let position = numbers.indexOf(42)
-
-// let position = numbers.findIndex(function (value, index, array) {
-//     return value === 57;
-// })
-
-// let elem = numbers.find(function (v) {
-//     return v === 14
-// })
-
-// let isIncluded = numbers.includes(141);
 
 
-// let flag = numbers.some(function (v) {
-//     return v >= 50
-// })
+// function mystry() {
+//     function chooseNumber() {               // xixoxixox
+//         return 7
+//     }
+//     return chooseNumber;
+//     function chooseNumber() {              // xixoxixox
+//         return 12;
+//     }
+// }
 
 
-// let flag = numbers.every(function (v) {
-//     return v >= 50;
-// })
 
-// [12, 14, 42, 57, 100]
+// function mystry() {
+//     var chooseNumber = function () {               // xixoxixox
+//         return 7
+//     }
+//     return chooseNumber;
+//     var chooseNumber = function () {              // xixoxixox
+//         return 12;
+//     }
+// }
 
-// let accValue = numbers.reduce(function (prevValue, currValue) {
-//     return prevValue -= currValue
-// }, 1000)
+// let nestedFn = mystry();
+
+// console.log(nestedFn());            // 12
 
 
-numbers.forEach(function (v) {
-    console.log("Value : ", v)
+
+
+
+// ARROW FUNCTION
+// let addition = (n1, n2) => n1 + n2;
+
+// console.log("Arrow : ", addition(2, 5));
+
+// let multiply = (n1, n2) => {
+//     let number1 = n1 ?? 1;
+//     let number2 = n2 ?? 1;
+//     return number1 * number2;
+// }
+
+// console.log("Multiply : ", multiply(3));
+
+
+// let square = val => val * val;
+
+// console.log("Square : ", square(4))
+
+
+// let nummbers = [12, 14, 15, 16, 100];
+
+// let filteredArray = nummbers.filter(value => value > 15)
+
+// console.log("FilteredArray : ", filteredArray);
+
+// function Person(){}
+
+// let john = new Person()
+
+// const Animal = () => {
+
+// }
+
+// let rabbit = new Animal()
+
+
+
+// let demoArgs = () => {
+//     console.log(arguments);
+//     // for (let args in arguments) {
+//     //     console.log(args)
+//     // }
+// }
+
+// demoArgs("john@test.com")
+// demoArgs("john@test.com", 32)
+// demoArgs("john@test.com", 32, true)
+
+// let user = {
+//     name: "John Doe"
+// }
+
+// function demoThis() {
+//     console.log(this);
+// }
+
+// demoThis();         // window
+
+// alert("Hello World")
+
+
+
+// const boundFn = demoThis.bind(user)
+
+// boundFn()
+
+
+
+
+
+
+
+// const demoArrowThis = () => console.log(this);
+
+// demoArrowThis()
+
+
+// let user = {
+//     name: "John",
+//     age: 32,
+//     getDetails: function () {
+//         let nestedFn = () => `Hello from ARROR ${this.name}`
+//         return nestedFn();
+//     }
+//     // getDetails: function () {
+//     //     let that = this;
+//     //     function nestedFn() {
+//     //         return `Hello from ${that.name}`
+//     //     }
+//     //     return nestedFn();
+//     // }
+// }
+
+// console.log(user.getDetails())
+
+
+// Higher Order Function - HOF
+// Callbacks - error first, callback last
+
+// function greet(err, data) {
+//     if (err) {
+//         return console.error(err)
+//     }
+//     console.log(data)
+// }
+
+function hof(arr, callback) {
+    if (arr.length > 2) {
+        callback(new Error("Too many values"));
+    } else {
+        callback(null, "Too less values")
+    }
+}
+
+hof([12, 3], (err, data) => {
+    if (err) {
+        return console.error(err)
+    }
+    console.log(data)
 })
-
-console.log(numbers);
-// console.log(accValue);
-// console.log(flag);
-// console.log(isIncluded);
-// console.log(elem);
-// console.log(position);
-// console.log(concatedArray);
-// console.log(mappedNumbers);
-// console.log(filteredArray);
-// console.log(slicedArray)
-
-
-
-
-// PRACTICE EXERCISE
-
-let users = [
-    { name: "John Doe", age: 30 },
-    { name: "Jenny Doe", age: 33 },
-    { name: "Alice", age: 35 },
-    { name: "Maria", age: 38 },
-]
-
-// - find out all users having age >= 35
-// - find out the user whose name starts with 'M'
-// - find out the total age of all the users
-// - sort the users according to their names
-// - delete the user named 'Alice'
-
-
-
-
-// TYPED ARRAY - WebGL - 3D, Images, Audio/Video, Large Files / Blobs
-
-let buffer = new ArrayBuffer(16);
-
-let dv1 = new DataView(buffer);
-
-dv1.setInt8(11, 99);
-
-// 4 Bytes starting from 10th index
-let dv2 = new DataView(buffer, 10, 4);
-
-console.log(dv2.getInt8(1))
