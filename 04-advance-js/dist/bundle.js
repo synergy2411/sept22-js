@@ -7,26 +7,90 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("function _typeof(obj) { \"@babel/helpers - typeof\"; return _typeof = \"function\" == typeof Symbol && \"symbol\" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && \"function\" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }, _typeof(obj); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, \"prototype\", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\nfunction _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } else if (call !== void 0) { throw new TypeError(\"Derived constructors may only return object or undefined\"); } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _isNativeReflectConstruct() { if (typeof Reflect === \"undefined\" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === \"function\") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }\n\nfunction _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError(\"Cannot initialize the same private elements twice on an object\"); } }\n\nfunction _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, \"get\"); return _classApplyDescriptorGet(receiver, descriptor); }\n\nfunction _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }\n\nfunction _classPrivateFieldSet(receiver, privateMap, value) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, \"set\"); _classApplyDescriptorSet(receiver, descriptor, value); return value; }\n\nfunction _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError(\"attempted to \" + action + \" private field on non-instance\"); } return privateMap.get(receiver); }\n\nfunction _classApplyDescriptorSet(receiver, descriptor, value) { if (descriptor.set) { descriptor.set.call(receiver, value); } else { if (!descriptor.writable) { throw new TypeError(\"attempted to set read only private field\"); } descriptor.value = value; } }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\n// REST / SPREAD\n// const demoRest = (email, ...args) => {\n//     console.log(args[0]);           // ?\n// }\n// // demoRest(\"john@test.com\")\n// // demoRest(\"john@test.com\", 32)\n// demoRest(\"john@test.com\", 32, true)\n// Collection - Array / Object\n// let friends = [\"John\", \"Maria\", \"Alice\"]\n// let moreFriends = [\"Jenny\", \"Jack\", \"Jill\", ...friends]\n// console.log(moreFriends);\n// const demoSpread = (f1, f2, f3) => {\n//     console.log(f2);\n// }\n// demoSpread(...friends)\n// let userA = {\n//     name: \"John\",\n//     age: 32,\n//     address: {\n//         street: \"201 MAin Road\",\n//         city: \"Pune\",\n//         postal: {\n//             code: \"401013\",\n//             state: \"MH\"\n//         }\n//     },\n//     friends: [\"f1\", \"f2\", \"f3\"]\n// }\n// let userB = {\n//     ...userA,           // Shallow copy\n//     name: \"Jenny\",\n//     age: 28,\n//     friends: [...userA.friends],        // Shallow copy\n//     address: { ...userA.address }       // Shallow copy\n// }\n// userB.friends.push(\"f4\");           // 4\n// userB.address.postal.code = 505050;\n// // console.log(userB)\n// // console.log(userA);             // 4\n// // DEEP COPY\n// let userC = JSON.parse(JSON.stringify(userA));\n// userC.address.postal.state = \"HYD\"\n// console.log(userA);\n// console.log(userB);\n// console.log(userC);\n// DESTRUCTURING\n// let fruits = [\"Apple\", \"Guava\", \"Kiwi\", \"Grapes\"];\n// let [f1, , , f3, f4] = fruits;\n// console.log(f3, f4);\n// let box = {\n//     width: 6,\n//     height: 8,\n//     books: [\"book1\", \"book2\", \"book3\"]\n// }\n// let { width: w, height: h, books: b } = box;\n// b.push(\"books\");\n// console.log(w, h, b)\n// console.log(box.books);     // ?\n// PRACTICE EXERCISE\n// let user = {\n//     firstName: \"Alice\",\n//     lastName: \"Martin\",\n//     age: 23,\n//     address: {\n//         street: \"201 Main Road\",\n//         city: \"Pune\"\n//     },\n//     friends: [\"Jack\", \"Jill\"]\n// }\n// let { firstName, lastName, age, address: { street, city }, friends: [f1, f2] } = user;\n// let users = [\n//     { email: \"john@test\", age: 20 },\n//     { email: \"jill@test\", age: 22 },\n//     { email: \"jack@test\", age: 23 },\n//     { email: \"jenny@test\", age: 26 },\n// ]\n// let [\n//     {email : e1, age : a1},\n//     {email : e2, age : a2},\n//     {email : e3, age : a3},\n//     {email : e4, age : a4},\n// ] = users;\n// let box = {\n//     \"width\": 4\n// }\n// let user = { name: \"John\" };\n// let map = new Map();\n// map.set(user, \"The Object\")\n// map.set(\"age\", 32)\n// map.set(true, \"is Admin\")\n// map.set(101, \"the Id\")\n// for (let item of map.values()) {\n//     console.log(item);\n// }\n// for (let key of map.keys()) {\n//     console.log(key)\n// }\n// console.log(map.size);\n// console.log(map.has(true))\n// map.delete(101)\n// console.log(map.get(101))\n// map.clear()\n// console.log(map.size);\n// let user = { name: \"John\" }\n// let set = new Set();\n// set.add(\"John Doe\")\n// set.add(99)\n// set.add(false)\n// set.add(user)\n// set.add(99)\n// set.add(user)\n// console.log(\"size :\", set.size);\n// for (let item of set) {\n//     console.log(item)\n// }\n// if (set.has(99)) {\n//     set.delete(99)\n// }\n// console.log(set.size);\n// WEAKMAP AND WEAKSET\n// let userA = { name: \"A\" }\n// let userB = { name: \"B\" }\n// let weakMap = new WeakMap()\n// weakMap.set(userA, \"User A\")\n// weakMap.set(userB, \"User B\")\n// console.log(weakMap.get(userA));\n// userA = null;\n// console.log(weakMap.get(userA));\n// let weakSet = new WeakSet();\n// weakSet.add(userA)\n// weakSet.add(userB)\n// userB = null;\n// if (weakSet.has(userB)) {\n//     console.log(\"Does exist\")\n// } else {\n//     console.log(\"Does not exist\");\n// }\n// TAGGED TEMPLATE LITERALS\n// function taggedFunction(firstArgs, ...secondArgs) {\n//     console.log(firstArgs);\n//     console.log(secondArgs)\n// }\n// let username = \"John Doe\";\n// let age = 32;\n// taggedFunction`Hello Mr. ${username}, You're ${age} years old.`\n// ITERATORS AND GENERATORS\n// let friends = [\"Jack\", \"Jill\", \"John\"]\n// console.log(friends);\n// const iterator = friends[Symbol.iterator]()\n// let result = iterator.next()\n// while (!result.done) {\n//     console.log(result.value);\n//     result = iterator.next();\n// }\n// let myIterator = {\n//     [Symbol.iterator]: function () {\n//         return {\n//             next: function () {\n//                 return {\n//                     value: \"First Package\",\n//                     done: false\n//                 }\n//             }\n//         }\n//     }\n// }\n// const iter = myIterator[Symbol.iterator]()\n// console.log(iter.next())\n// const makeRangeIterator = (start, end, steps) => {\n//     let startPoint = start;\n//     const rangeIterator = {\n//         next: function () {\n//             let result;\n//             if (startPoint < end) {\n//                 result = { value: startPoint, done: false };\n//                 startPoint += steps;\n//                 return result\n//             }\n//             return { value: undefined, done: true }\n//         }\n//     }\n//     return rangeIterator;\n// }\n// const rangeIterator = makeRangeIterator(2, 15, 2);\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// console.log(rangeIterator.next())\n// function* myGenerator() {\n//     yield 101;\n//     yield 202;\n//     yield \"John Doe\";\n// }\n// const it = myGenerator()\n// console.log(it.next())\n// console.log(it.next())\n// console.log(it.next())\n// console.log(it.next())\n// function* makeRangeGenerator(start, end, step) {\n//     for (let i = start; i <= end; i += step) {\n//         yield i;\n//     }\n// }\n// const it = makeRangeGenerator(1, 5, 1)\n// for (let item of it) {\n//     console.log(item)\n// }\n// console.log(it.next())\n// console.log(it.next())\n// console.log(it.next())\n// console.log(it.next())\n// console.log(it.next())\n// let myIterator = {\n//     *[Symbol.iterator]() {\n//         yield \"First Package\"\n//     }\n// }\n// for (let item of myIterator) {\n//     console.log(item)\n// }\n// CLASSES\nvar Person = /*#__PURE__*/function () {\n  function Person(firstName, lastName) {\n    _classCallCheck(this, Person);\n\n    this.firstName = firstName;\n    this.lastName = lastName;\n  }\n\n  _createClass(Person, [{\n    key: \"getDetails\",\n    value: function getDetails() {\n      return \"\".concat(this.firstName, \" \").concat(this.lastName);\n    }\n  }]);\n\n  return Person;\n}();\n\nvar john = new Person(\"John\", \"Doe\");\n\nvar _salary = /*#__PURE__*/new WeakMap();\n\nvar Employee = /*#__PURE__*/function (_Person) {\n  _inherits(Employee, _Person);\n\n  var _super = _createSuper(Employee);\n\n  function Employee(fname, lname, age, salary) {\n    var _this;\n\n    _classCallCheck(this, Employee);\n\n    _this = _super.call(this, fname, lname);\n\n    _classPrivateFieldInitSpec(_assertThisInitialized(_this), _salary, {\n      writable: true,\n      value: void 0\n    });\n\n    _this.age = age;\n\n    _classPrivateFieldSet(_assertThisInitialized(_this), _salary, salary);\n\n    return _this;\n  } // Overriding\n\n\n  _createClass(Employee, [{\n    key: \"getDetails\",\n    value: function getDetails() {\n      return \"\".concat(this.age, \" - \").concat(_classPrivateFieldGet(this, _salary));\n    }\n  }, {\n    key: \"salary\",\n    get: function get() {\n      return _classPrivateFieldGet(this, _salary);\n    },\n    set: function set(value) {\n      _classPrivateFieldSet(this, _salary, value);\n    }\n  }]);\n\n  return Employee;\n}(Person);\n\nvar empOne = new Employee(\"Foo\", \"Bar\", 32, 10000);\nconsole.log(empOne.getDetails());\n\n//# sourceURL=webpack://02-boilerplate-webpack-babel-setup/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils_fortune__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/fortune */ \"./src/utils/fortune.js\");\n// COMMONJS MODULE SYSTEM\n// const { sum, mul } = require(\"./utils/maths\")\n// console.log(\"Sum : \", sum(4, 5));\n// console.log(\"Multiply : \", mul(4, 5));\n// ESM MODULE SYSTEM - Named Export/Import\n\nconsole.log(\"Today Fortune : \", (0,_utils_fortune__WEBPACK_IMPORTED_MODULE_0__.getDailyFortune)());\nconsole.log(\"Lucky Number : \", (0,_utils_fortune__WEBPACK_IMPORTED_MODULE_0__.getLuckyNumber)()); // ESM MODULE SYSTEM - Default Export/Import\n\n\nvar foo = new _utils_fortune__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"S001\", \"Foo Bar\");\nconsole.log(foo.getDetails());\n\n//# sourceURL=webpack://02-boilerplate-webpack-babel-setup/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/utils/fortune.js":
+/*!******************************!*\
+  !*** ./src/utils/fortune.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"getDailyFortune\": () => (/* binding */ getDailyFortune),\n/* harmony export */   \"getLuckyNumber\": () => (/* binding */ getLuckyNumber)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\n// Named Export\nvar getDailyFortune = function getDailyFortune() {\n  return \"Run 5 miles today\";\n};\nvar MAGIC_NUMBER = Math.round(Math.random() * 100);\nvar getLuckyNumber = function getLuckyNumber() {\n  return MAGIC_NUMBER;\n}; // Default Export\n\nvar Student = /*#__PURE__*/function () {\n  function Student(studId, name) {\n    _classCallCheck(this, Student);\n\n    this.studId = studId;\n    this.name = name;\n  }\n\n  _createClass(Student, [{\n    key: \"getDetails\",\n    value: function getDetails() {\n      return \"\".concat(this.studId, \" : \").concat(this.name);\n    }\n  }]);\n\n  return Student;\n}();\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Student);\n\n//# sourceURL=webpack://02-boilerplate-webpack-babel-setup/./src/utils/fortune.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	
 /******/ })()
 ;

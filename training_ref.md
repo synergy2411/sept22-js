@@ -162,3 +162,26 @@ p
 - Iterable Protocol
   : should contain next() method
   : should return the object with value & done properties
+
+# Modules -
+
+- CommonJS Module System : followed by NodeJS
+  : module.exports -> to export
+  : require() -> to import
+
+- ES6 Module System (ESM) : Commonly used amoung browsers
+  : export keyword
+  : import statement
+- AMD
+- UMD
+
+## Libraries that load Modules
+
+- SystemJS
+- RequireJS
+- Webpack
+- Parcel
+
+# One default export each Module is permitted
+
+# Module implement encapsulation
