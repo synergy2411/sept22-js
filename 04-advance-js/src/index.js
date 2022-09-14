@@ -280,29 +280,77 @@
 
 
 
-const makeRangeIterator = (start, end, steps) => {
-    let startPoint = start;
-    const rangeIterator = {
-        next: function () {
-            let result;
-            if (startPoint < end) {
-                result = { value: startPoint, done: false };
-                startPoint += steps;
-                return result
-            }
-            return { value: undefined, done: true }
-        }
+// const makeRangeIterator = (start, end, steps) => {
+//     let startPoint = start;
+//     const rangeIterator = {
+//         next: function () {
+//             let result;
+//             if (startPoint < end) {
+//                 result = { value: startPoint, done: false };
+//                 startPoint += steps;
+//                 return result
+//             }
+//             return { value: undefined, done: true }
+//         }
+//     }
+//     return rangeIterator;
+// }
+
+// const rangeIterator = makeRangeIterator(2, 15, 2);
+
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+// console.log(rangeIterator.next())
+
+
+
+
+// function* myGenerator() {
+//     yield 101;
+//     yield 202;
+//     yield "John Doe";
+// }
+
+// const it = myGenerator()
+
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+
+// function* makeRangeGenerator(start, end, step) {
+//     for (let i = start; i <= end; i += step) {
+//         yield i;
+//     }
+// }
+
+// const it = makeRangeGenerator(1, 5, 1)
+
+// for (let item of it) {
+//     console.log(item)
+// }
+
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+// console.log(it.next())
+
+
+
+let myIterator = {
+    *[Symbol.iterator]() {
+        yield "First Package"
     }
-    return rangeIterator;
 }
 
-const rangeIterator = makeRangeIterator(2, 15, 2);
 
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
-console.log(rangeIterator.next())
+for (let item of myIterator) {
+    console.log(item)
+}
