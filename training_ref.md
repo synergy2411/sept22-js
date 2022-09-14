@@ -158,3 +158,7 @@ p
 # Spread creates shallow copy of collection - Array / Object
 
 # Iterators and generators
+
+- Iterable Protocol
+  : should contain next() method
+  : should return the object with value & done properties

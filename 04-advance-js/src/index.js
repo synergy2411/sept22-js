@@ -199,8 +199,10 @@
 // console.log(set.size);
 
 
-let userA = { name: "A" }
-let userB = { name: "B" }
+// WEAKMAP AND WEAKSET
+
+// let userA = { name: "A" }
+// let userB = { name: "B" }
 
 // let weakMap = new WeakMap()
 
@@ -213,15 +215,94 @@ let userB = { name: "B" }
 
 // console.log(weakMap.get(userA));
 
-let weakSet = new WeakSet();
+// let weakSet = new WeakSet();
 
-weakSet.add(userA)
-weakSet.add(userB)
+// weakSet.add(userA)
+// weakSet.add(userB)
 
-userB = null;
+// userB = null;
 
-if (weakSet.has(userB)) {
-    console.log("Does exist")
-} else {
-    console.log("Does not exist");
+// if (weakSet.has(userB)) {
+//     console.log("Does exist")
+// } else {
+//     console.log("Does not exist");
+// }
+
+
+// TAGGED TEMPLATE LITERALS
+
+// function taggedFunction(firstArgs, ...secondArgs) {
+//     console.log(firstArgs);
+//     console.log(secondArgs)
+// }
+
+
+// let username = "John Doe";
+// let age = 32;
+
+// taggedFunction`Hello Mr. ${username}, You're ${age} years old.`
+
+
+
+// ITERATORS AND GENERATORS
+
+
+// let friends = ["Jack", "Jill", "John"]
+
+// console.log(friends);
+
+// const iterator = friends[Symbol.iterator]()
+
+// let result = iterator.next()
+
+// while (!result.done) {
+//     console.log(result.value);
+//     result = iterator.next();
+// }
+
+
+// let myIterator = {
+//     [Symbol.iterator]: function () {
+//         return {
+//             next: function () {
+//                 return {
+//                     value: "First Package",
+//                     done: false
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// const iter = myIterator[Symbol.iterator]()
+
+// console.log(iter.next())
+
+
+
+const makeRangeIterator = (start, end, steps) => {
+    let startPoint = start;
+    const rangeIterator = {
+        next: function () {
+            let result;
+            if (startPoint < end) {
+                result = { value: startPoint, done: false };
+                startPoint += steps;
+                return result
+            }
+            return { value: undefined, done: true }
+        }
+    }
+    return rangeIterator;
 }
+
+const rangeIterator = makeRangeIterator(2, 15, 2);
+
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
+console.log(rangeIterator.next())
