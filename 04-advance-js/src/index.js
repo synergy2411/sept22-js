@@ -344,13 +344,52 @@
 
 
 
-let myIterator = {
-    *[Symbol.iterator]() {
-        yield "First Package"
+// let myIterator = {
+//     *[Symbol.iterator]() {
+//         yield "First Package"
+//     }
+// }
+
+
+// for (let item of myIterator) {
+//     console.log(item)
+// }
+
+
+
+// CLASSES
+
+class Person {
+
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    getDetails() {
+        return `${this.firstName} ${this.lastName}`
     }
 }
 
+let john = new Person("John", "Doe")
 
-for (let item of myIterator) {
-    console.log(item)
+
+class Employee extends Person {
+    #salary;
+
+    constructor(fname, lname, age, salary) {
+        super(fname, lname);
+        this.age = age;
+        this.#salary = salary;
+    }
+    // Overriding
+    getDetails() {
+        return `${this.age} - ${this.#salary}`;
+    }
+
+    get salary() { return this.#salary; }
+    set salary(value) { this.#salary = value }
 }
+
+let empOne = new Employee("Foo", "Bar", 32, 10000);
+console.log(empOne.getDetails())
