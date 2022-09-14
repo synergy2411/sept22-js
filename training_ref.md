@@ -185,3 +185,5 @@ p
 # One default export each Module is permitted
 
 # Module implement encapsulation
+
+# JavaScript runs all the synchronous code first before any asynchronous code
