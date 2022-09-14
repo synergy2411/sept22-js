@@ -1,0 +1,34 @@
+{
+  "expenses": [
+    {
+      "id": "e001",
+      "title": "grocery",
+      "amount": 12
+    },
+    {
+      "id": "e002",
+      "title": "shopping",
+      "amount": 19
+    },
+    {
+      "id": "e003",
+      "title": "insurance",
+      "amount": 22
+    },
+    {
+      "title": "planting",
+      "amount": "12",
+      "id": "Pbw1T7e"
+    },
+    {
+      "title": "books",
+      "amount": "99",
+      "id": "RIpARi_"
+    },
+    {
+      "title": "Pen",
+      "amount": "11",
+      "id": "VMi7D1g"
+    }
+  ]
+}

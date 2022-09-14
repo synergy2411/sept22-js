@@ -168,3 +168,5 @@ btnFetch.addEventListener("click", () => {
 
     // XHR Object - XMLHttpRequest
 })
+
+

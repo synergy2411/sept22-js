@@ -219,3 +219,10 @@ p
 - reject : immediately reject the promise.
 
 - resolve : immediately resolve the promise.
+
+# Expenses App
+
+- Create expenses
+- Display expenses
+- Expenses will be fetched/stored by making server call
+- Create a DELETE button

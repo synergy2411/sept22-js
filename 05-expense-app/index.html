@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="container">
+    <p class="display-3 text-center">Expenses App</p>
+
+    <form>
+      <!-- title -->
+      <div class="form-group">
+        <label for="title">Title: </label>
+        <input type="text" class="form-control" id="txtTitle" />
+      </div>
+      <!-- amount -->
+      <div class="form-group">
+        <label for="amount">Amount :</label>
+        <input type="number" class="form-control" id="txtAmount" />
+      </div>
+      <br />
+      <div class="form-group">
+        <button id="btnAddExpense" class="btn btn-primary">Add Expense</button>
+      </div>
+    </form>
+
+    <br />
+    <hr />
+
+    <ul class="list-group" id="expense-container"></ul>
+    <script src="./dist/bundle.js"></script>
+  </body>
+</html>
