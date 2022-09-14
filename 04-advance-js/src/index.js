@@ -44,52 +44,101 @@
 // PROMISE
 
 // Producer Code
-console.log("START")
-const demoPromiseProducer = (arr) => {
-    let promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (arr.length > 2) {
-                resolve({ message: "SUCCESS" })
-            } else {
-                reject(new Error("Something went wrong"))
-            }
-        }, 3000)
-    });
+// console.log("START")
+// const demoPromiseProducer = (arr) => {
+//     let promise = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (arr.length > 2) {
+//                 resolve({ message: "SUCCESS" })
+//             } else {
+//                 reject(new Error("Something went wrong"))
+//             }
+//         }, 3000)
+//     });
 
-    return promise;
-}
+//     return promise;
+// }
 
 // Consumer Code
 // - then ... catch
 // - Async... await
 
-const demoAsyncAwait = async () => {
-    try {
-        let response = await demoPromiseProducer([2, 4])
-        console.log("ASYNC RESPONSE : ", response)
-    } catch (error) {
-        console.error(error);
-    }
-}
+// const demoAsyncAwait = async () => {
+//     try {
+//         let response = await demoPromiseProducer([2, 4])
+//         console.log("ASYNC RESPONSE : ", response)
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
 
-demoAsyncAwait()
+// demoAsyncAwait()
 
 
-const demoPromiseConsumer = () => {
-    demoPromiseProducer([1, 2, 3, 4])
-        .then((response) => {
-            console.log("RESPONSE : ", response)
-            return response.message;
-        })
-        .then((message) => {
-            console.log("MESSAGE : ", message)
-        })
-        .catch((error) => {
-            console.error(error)
-        })
-        .finally(() => {
-            console.log("COMPLETED")
-        })
-}
+// const demoPromiseConsumer = () => {
+//     demoPromiseProducer([1, 2, 3, 4])
+//         .then((response) => {
+//             console.log("RESPONSE : ", response)
+//             return response.message;
+//         })
+//         .then((message) => {
+//             console.log("MESSAGE : ", message)
+//         })
+//         .catch((error) => {
+//             console.error(error)
+//         })
+//         .finally(() => {
+//             console.log("COMPLETED")
+//         })
+// }
 
-demoPromiseConsumer();
+// demoPromiseConsumer();
+
+
+// Promise.race([
+//     new Promise((resolve, reject) => setTimeout(() => { resolve("First") }, 1000)),
+//     new Promise((resolve, reject) => setTimeout(() => { resolve("Second") }, 2000)),
+//     new Promise((resolve, reject) => setTimeout(() => { resolve("Third") }, 3000)),
+// ]).then(response => {
+//     console.log(response)
+// }).catch(console.error)
+
+
+// Promise.allSettled([
+//     new Promise((resolve, reject) => setTimeout(() => {
+//         resolve("First")
+//     }, 1000)),
+//     new Promise((resolve, reject) => setTimeout(() => {
+//         reject(new Error("Rejected after 2 seconds"))
+//     }, 2000)),
+//     new Promise((resolve, reject) => setTimeout(() => {
+//         resolve("Third")
+//     }, 3000))
+// ]).then(response => {
+//     console.log(response)
+// }).catch(console.error)
+
+
+
+// Promise.any([
+//     new Promise((resolve, reject) => setTimeout(() => {
+//         resolve("First")
+//     }, 3000)),
+//     new Promise((resolve, reject) => setTimeout(() => {
+//         reject(new Error("Rejected after 2 seconds"))
+//     }, 300)),
+//     new Promise((resolve, reject) => setTimeout(() => {
+//         resolve("Third")
+//     }, 500))
+// ]).then(response => {
+//     console.log(response)
+// }).catch(console.error)
+
+// Promise.resolve("Some Value")
+//     .then(response => console.log(response))
+//     .catch(console.error)
+
+
+// Promise.reject(new Error("REJECTED"))
+//     .then(response => console.log(response))
+//     .catch(console.error)
