@@ -187,3 +187,35 @@ p
 # Module implement encapsulation
 
 # JavaScript runs all the synchronous code first before any asynchronous code
+
+- Asynchronous Activity :
+  : Timers
+  : Remote Server Calls
+  : Reading/Writing
+  : Obtaining Socket
+  : DB Connection
+  : DB Operations
+
+- Promises / Async...await
+
+- Promise
+
+  > Resolve / Success
+  > Reject / Failure
+
+- Producer Code / Build
+- Consumer Code
+
+# PROMISE API - STATIC METHODS OF PORMISE CLASS
+
+- all : excutes many promises parallely and return the result at once. "ALL OR NOTHING"
+
+- race : executes many promises and return the result of first completed promise
+
+- allSettled : will wait for all the promises to be settled
+
+- any : returns the result of first settled/resolved promise.
+
+- reject : immediately reject the promise.
+
+- resolve : immediately resolve the promise.

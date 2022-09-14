@@ -142,3 +142,29 @@
 // Promise.reject(new Error("REJECTED"))
 //     .then(response => console.log(response))
 //     .catch(console.error)
+
+
+
+
+// FETCH API
+
+import axios from 'axios';
+
+const btnFetch = document.querySelector("#btnFetch");
+
+
+btnFetch.addEventListener("click", () => {
+    let baseUrl = "https://jsonplaceholder.typicode.com/photos";
+
+
+    axios.get(baseUrl)
+        .then(console.log)
+        .catch(console.error)
+
+    // fetch(baseUrl)
+    //     .then(response => response.json())
+    //     .then(result => console.log(result))
+    //     .catch(console.error);
+
+    // XHR Object - XMLHttpRequest
+})
