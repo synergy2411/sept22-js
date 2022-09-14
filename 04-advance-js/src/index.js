@@ -108,22 +108,120 @@
 
 // PRACTICE EXERCISE
 
-let user = {
-    firstName: "Alice",
-    lastName: "Martin",
-    age: 23,
-    address: {
-        street: "201 Main Road",
-        city: "Pune"
-    },
-    friends: ["Jack", "Jill"]
+// let user = {
+//     firstName: "Alice",
+//     lastName: "Martin",
+//     age: 23,
+//     address: {
+//         street: "201 Main Road",
+//         city: "Pune"
+//     },
+//     friends: ["Jack", "Jill"]
+// }
+
+// let { firstName, lastName, age, address: { street, city }, friends: [f1, f2] } = user;
+
+
+
+// let users = [
+//     { email: "john@test", age: 20 },
+//     { email: "jill@test", age: 22 },
+//     { email: "jack@test", age: 23 },
+//     { email: "jenny@test", age: 26 },
+// ]
+
+
+// let [
+//     {email : e1, age : a1},
+//     {email : e2, age : a2},
+//     {email : e3, age : a3},
+//     {email : e4, age : a4},
+// ] = users;
+
+
+
+// let box = {
+//     "width": 4
+// }
+
+// let user = { name: "John" };
+
+// let map = new Map();
+
+// map.set(user, "The Object")
+// map.set("age", 32)
+// map.set(true, "is Admin")
+// map.set(101, "the Id")
+
+// for (let item of map.values()) {
+//     console.log(item);
+// }
+
+// for (let key of map.keys()) {
+//     console.log(key)
+// }
+
+// console.log(map.size);
+
+// console.log(map.has(true))
+
+// map.delete(101)
+
+// console.log(map.get(101))
+
+// map.clear()
+
+// console.log(map.size);
+
+
+
+// let user = { name: "John" }
+
+// let set = new Set();
+
+// set.add("John Doe")
+// set.add(99)
+// set.add(false)
+// set.add(user)
+// set.add(99)
+// set.add(user)
+
+// console.log("size :", set.size);
+
+// for (let item of set) {
+//     console.log(item)
+// }
+
+// if (set.has(99)) {
+//     set.delete(99)
+// }
+
+// console.log(set.size);
+
+
+let userA = { name: "A" }
+let userB = { name: "B" }
+
+// let weakMap = new WeakMap()
+
+// weakMap.set(userA, "User A")
+// weakMap.set(userB, "User B")
+
+// console.log(weakMap.get(userA));
+
+// userA = null;
+
+// console.log(weakMap.get(userA));
+
+let weakSet = new WeakSet();
+
+weakSet.add(userA)
+weakSet.add(userB)
+
+userB = null;
+
+if (weakSet.has(userB)) {
+    console.log("Does exist")
+} else {
+    console.log("Does not exist");
 }
-
-
-let users = [
-    { email: "john@test", age: 20 },
-    { email: "jill@test", age: 22 },
-    { email: "jack@test", age: 23 },
-    { email: "jenny@test", age: 26 },
-]
-
